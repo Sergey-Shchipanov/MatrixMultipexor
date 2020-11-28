@@ -26,11 +26,11 @@ export class Matrix {
         return this._matrix[row][column];
     }
 
-    addRow(elements: number[]) {
+    replaceRow(row: number, elements: number[]) {
         if (elements.length !== this._columnsCount) {
             throw new Error("Invalid number of elements");
         }
-        this._matrix.push(elements);
+        this._matrix[row] = (elements);
     }
 
     getRow(row: number): number[] {

@@ -10,7 +10,7 @@ export class MatrixGenerator {
             for (let j: number = 0; j < columnCount; j++) {
                 row.push(Number((Math.random() * 10).toFixed(1)));
             }
-            matrix.addRow(row);
+            matrix.replaceRow(i, row);
         }
         return matrix;
     }
