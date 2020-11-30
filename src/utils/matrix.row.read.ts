@@ -16,8 +16,11 @@ export class MatrixRowRead extends Readable {
 
     _read() {
         if (this.currentRow < this.sourceMatrix.rowsCount) {
+            console.log("read row " + this.sourceMatrix.getRow(this.currentRow));
             this.push(new MatrixRow(this.currentRow, this.sourceMatrix.getRow(this.currentRow)));
             this.currentRow++;
+        } else {
+            this.push(null);
         }
     }
 }

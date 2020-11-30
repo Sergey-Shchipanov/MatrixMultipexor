@@ -5,6 +5,7 @@
   "main": "/dist/server.js",
   "scripts": {
     "clean": "rimraf dist",
+    "prebuild": "tslint -c tslint.json -p tsconfig.json",
     "build": "tsc",
     "start": "node ./dist/server.js"
   },

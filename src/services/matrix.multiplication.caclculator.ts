@@ -10,8 +10,6 @@ export class MatrixMultiplicationCalculator {
         const matrixRowTransform: MatrixRowTransform = new MatrixRowTransform(secondMatrix);
         const matrixRowWriter: MatrixRowWrite = new MatrixRowWrite("./calculationResult.txt");
 
-        matrixRowReader.pipe(matrixRowTransform).pipe(matrixRowWriter);
-
         return matrixRowReader.pipe(matrixRowTransform).pipe(matrixRowWriter);
     }
 }
