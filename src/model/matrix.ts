@@ -46,7 +46,7 @@ export class Matrix {
     }
 
     getColumn(column: number): number[] {
-        if (column >= this._rowsCount) {
+        if (column >= this.columnsCount) {
             throw new Error("Index out of bounds");
         }
         const resultColumn: number[] = [];
